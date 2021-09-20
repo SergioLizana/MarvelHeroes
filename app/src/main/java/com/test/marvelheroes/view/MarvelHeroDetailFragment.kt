@@ -62,6 +62,7 @@ class MarvelHeroDetailFragment : BaseFragment<MarvelHeroDetailFragmentBinding>()
 
     private fun initObservables() {
         marvelViewModel.characterDetail.observe(viewLifecycleOwner, {
+            activity?.title = it.characterName
             binding.heroName.text = it.characterName
             binding.heroDescription.text = it.characterDescription
 

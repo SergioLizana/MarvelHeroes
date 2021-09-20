@@ -1,0 +1,4 @@
+<resources>
+    <string name="view_not_found">Heroe no encontrado</string>
+    <string name="view_retry">Ha habido algún tipo de error, intentalo de nuevo.</string>
+</resources>

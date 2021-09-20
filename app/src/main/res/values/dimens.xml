@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="details_image_size">200dp</dimen>
+    <dimen name="details_title_size">24sp</dimen>
+    <dimen name="details_description_size">14sp</dimen>
+</resources>

@@ -1,0 +1,18 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/view_loading" />
+
+        <include
+            android:id="@+id/retry_view"
+            layout="@layout/view_retry" />
+
+    </ViewFlipper>
+
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/hero_detail_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/details_image_size"
+            android:layout_height="@dimen/details_image_size"/>
+
+        <TextView
+            android:id="@+id/hero_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/details_title_size"
+            android:layout_marginTop="@dimen/small_space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hero_detail_image"
+            tools:text="Nombre de heroe" />
+
+        <TextView
+            android:id="@+id/hero_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_space"
+            android:layout_marginTop="@dimen/small_space"
+            android:layout_marginEnd="@dimen/normal_space"
+            android:textSize="@dimen/details_description_size"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hero_name"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor fermentum lobortis. Curabitur enim leo, fermentum vitae aliquet vel, faucibus at dolor" />
+
+        <TextView
+            android:id="@+id/comic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            app:layout_constraintEnd_toEndOf="@+id/hero_description"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/hero_description"
+            app:layout_constraintTop_toBottomOf="@id/hero_description"
+            android:text="Comics:" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comic_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/small_space"
+            android:layout_marginBottom="@dimen/small_space"
+            tools:listitem="@layout/marvel_comic_cell"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/hero_description"
+            app:layout_constraintStart_toStartOf="@+id/comic_title"
+            app:layout_constraintTop_toBottomOf="@+id/comic_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

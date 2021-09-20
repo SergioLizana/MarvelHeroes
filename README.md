@@ -1,6 +1,6 @@
 ## CODE  CHALLENGE MARVEL HEROES
 
-![](https://github.com/jparrenobonillo/marvel-app/blob/master/screeshots/marvel_heroes.png)
+![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/image1.png)
 
 La aplicación se compone de 4 pantallas:
 
@@ -10,10 +10,9 @@ La aplicación se compone de 4 pantallas:
 
 - Detalle de personaje
 
-![](https://github.com/jparrenobonillo/marvel-app/blob/master/screeshots/splash.png)
-![](https://github.com/jparrenobonillo/marvel-app/blob/master/screeshots/character_list.png)
-![](https://github.com/jparrenobonillo/marvel-app/blob/master/screeshots/favorites_list.png)
-![](https://github.com/jparrenobonillo/marvel-app/blob/master/screeshots/character_detail.png)
+![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/splash.png)
+![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/character_list.png)
+![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/character_detail.png)
 
 ## Datos relevantes
 
@@ -25,14 +24,12 @@ La aplicación se compone de 4 pantallas:
 
 * **Navigation + safe-args** para enviar parámetros entre fragments.
 
-* **Hilt** para la inyección de dependencias.
-
-* **ROOM** para gestión de favoritos en una base de datos local.
+* **Dagger** para la inyección de dependencias.
    
-* **Retofit + Gson** para hacer llamadas a la API de Marvel.
+* **Retofit + Moshi** para hacer llamadas a la API de Marvel.
 
 * **Sealed Classes**
 
-* **Swagger Codegen** para la generación de clases a partir de la API de Marvel.
+* **Rx Java** para la gestion de hilos en la aplicación.
 
-* **Unit test y UI test con Espresso**
+* **Unit test con mockk**

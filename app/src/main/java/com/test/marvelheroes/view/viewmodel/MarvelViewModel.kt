@@ -6,6 +6,8 @@ import com.marvel.domain.repository.MarvelRepository
 import com.marvelheroes.common.extensions.*
 import com.marvelheroes.common.view.viewmodel.BaseViewModel
 import com.marvelheroes.common.view.viewmodel.UnexpectedError
+import com.test.marvelheroes.utils.toDetailsDisplay
+import com.test.marvelheroes.utils.toDisplay
 import com.test.marvelheroes.view.model.CharacterDetailsDisplay
 import com.test.marvelheroes.view.model.CharacterDisplay
 import javax.inject.Inject
@@ -28,11 +30,7 @@ class MarvelViewModel @Inject constructor(
                 disposables = disposables,
                 onSuccess = {
                     var characterDisplayList: List<CharacterDisplay>? = it.data?.results?.map { characterModel ->
-                        CharacterDisplay(
-                            characterId = characterModel.id,
-                            characterName = characterModel.name,
-                            thumbnail = characterModel.thumbnail
-                        )
+                        characterModel.toDisplay()
                     }
                     characterDisplayList?.let { list ->
                         _characterList.postValue(list)
@@ -52,13 +50,7 @@ class MarvelViewModel @Inject constructor(
                 disposables = disposables,
                 onSuccess = {
                     var characterDetailsDisplay: CharacterDetailsDisplay? = it.data?.results?.get(0)?.let { characterModel ->
-                        CharacterDetailsDisplay(
-                            characterId = characterModel.id,
-                            characterName = characterModel.name,
-                            thumbnail = characterModel.thumbnail,
-                            comicList = characterModel.comics,
-                            characterDescription = characterModel.description
-                        )
+                        characterModel.toDetailsDisplay()
                     }
                     characterDetailsDisplay?.let { characterDetail ->
                         _characterDetail.postValue(characterDetail)

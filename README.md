@@ -2,7 +2,7 @@
 
 ![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/image1.png)
 
-La aplicación se compone de 4 pantallas:
+La aplicación se compone de 3 pantallas:
 
 - Splash
 
@@ -16,11 +16,17 @@ La aplicación se compone de 4 pantallas:
 
 ## Datos relevantes
 
+* **Arquitectura del proyecto**
+
+![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/architecture.png)
+
+* **Arquitectura del librerias**
+
+![](https://github.com/SergioLizana/MarvelHeroes/blob/master/screenshots/libraries.png)
+
 * **MVVM, Single Activity, Android Architecture Components**: Activity/Fragment -> ViewModel -> Repository.
 
 * **Patrón Repository con clean architecture** para acceder a la API de Marvel.
-
-![](https://github.com/jparrenobonillo/marvel-app/blob/master/screeshots/repository_architecture.png)
 
 * **Navigation + safe-args** para enviar parámetros entre fragments.
 
